@@ -68,6 +68,16 @@ namespace MyDesktop
             {
                 LabelLastName.ForeColor = Color.Black;
             }
+
+            if (TextEmail.Text == string.Empty)
+            {
+                LabelEmail.ForeColor = Color.Red;
+                res = false;
+            }
+            else
+            {
+                LabelEmail.ForeColor = Color.Black;
+            }
             return res;
         }
 
@@ -76,6 +86,7 @@ namespace MyDesktop
             TextFirstName.Text = string.Empty;
             TextLastName.Text = string.Empty;
             DateDob.Value = DateTime.Now;
+            TextEmail.Text = String.Empty;
         }
 
         private void InsertData()
@@ -84,8 +95,10 @@ namespace MyDesktop
             {
                 FirstName = TextFirstName.Text,
                 LastName = TextLastName.Text,
-                DOB = DateDob.Value
+                DOB = DateDob.Value,
+                Email = TextEmail.Text
             };
+
             db.Students.Add(student);
             db.SaveChanges();
         }
@@ -98,6 +111,10 @@ namespace MyDesktop
         private void BtnRefresh_Click(object sender, EventArgs e)
         {
             RefreshData();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

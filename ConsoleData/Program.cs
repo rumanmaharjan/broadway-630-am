@@ -9,7 +9,8 @@ namespace ConsoleData
 {
     internal class Program
     {
-        public static string ConnectionString = "Data Source=DESKTOP-C25RLDB\\SQLEXPRESS;Initial Catalog=SomeDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        public static string ConnectionString = "Data Source=LAPTOP-ATUCG9OR\\" +
+            "RUMANDB;Initial Catalog=SomeDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         private static void Main(string[] args)
         {
@@ -17,7 +18,7 @@ namespace ConsoleData
             var res = "n";
             do
             {
-                //AdoData();
+                AdoData();
 
                 Console.WriteLine("Do you want to continue more");
                 res = Console.ReadLine();
@@ -66,12 +67,12 @@ namespace ConsoleData
             //step 5 execute the command
             var res = cmd.ExecuteReader();
             //step 6 Close conenction
-            con.Close();
             //step 7 Read the data
             while (res.Read())
             {
                 Console.WriteLine($"Id => {res.GetFieldValue<int>(0)}, FullName => {res.GetFieldValue<string>(1)} {res.GetFieldValue<string>(2)}");
             }
+            con.Close();
         }
 
         private static void InsertPersonal()

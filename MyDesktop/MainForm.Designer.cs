@@ -39,6 +39,8 @@ namespace MyDesktop
             this.BtnCreate = new System.Windows.Forms.Button();
             this.BtnRefresh = new System.Windows.Forms.Button();
             this.BtnReset = new System.Windows.Forms.Button();
+            this.LabelEmail = new System.Windows.Forms.Label();
+            this.TextEmail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridStudent)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +61,7 @@ namespace MyDesktop
             this.LabelFirstName.Location = new System.Drawing.Point(72, 35);
             this.LabelFirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelFirstName.Name = "LabelFirstName";
-            this.LabelFirstName.Size = new System.Drawing.Size(88, 21);
+            this.LabelFirstName.Size = new System.Drawing.Size(86, 20);
             this.LabelFirstName.TabIndex = 1;
             this.LabelFirstName.Text = "First Name";
             // 
@@ -69,7 +71,7 @@ namespace MyDesktop
             this.LabelLastName.Location = new System.Drawing.Point(72, 89);
             this.LabelLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelLastName.Name = "LabelLastName";
-            this.LabelLastName.Size = new System.Drawing.Size(106, 25);
+            this.LabelLastName.Size = new System.Drawing.Size(86, 20);
             this.LabelLastName.TabIndex = 2;
             this.LabelLastName.Text = "Last Name";
             // 
@@ -79,7 +81,7 @@ namespace MyDesktop
             this.LabelDOB.Location = new System.Drawing.Point(72, 145);
             this.LabelDOB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelDOB.Name = "LabelDOB";
-            this.LabelDOB.Size = new System.Drawing.Size(98, 21);
+            this.LabelDOB.Size = new System.Drawing.Size(99, 20);
             this.LabelDOB.TabIndex = 3;
             this.LabelDOB.Text = "Date of Birth";
             // 
@@ -87,21 +89,21 @@ namespace MyDesktop
             // 
             this.TextFirstName.Location = new System.Drawing.Point(270, 32);
             this.TextFirstName.Name = "TextFirstName";
-            this.TextFirstName.Size = new System.Drawing.Size(307, 30);
+            this.TextFirstName.Size = new System.Drawing.Size(307, 26);
             this.TextFirstName.TabIndex = 4;
             // 
             // TextLastName
             // 
             this.TextLastName.Location = new System.Drawing.Point(270, 86);
             this.TextLastName.Name = "TextLastName";
-            this.TextLastName.Size = new System.Drawing.Size(307, 30);
+            this.TextLastName.Size = new System.Drawing.Size(307, 26);
             this.TextLastName.TabIndex = 5;
             // 
             // DateDob
             // 
             this.DateDob.Location = new System.Drawing.Point(270, 140);
             this.DateDob.Name = "DateDob";
-            this.DateDob.Size = new System.Drawing.Size(306, 30);
+            this.DateDob.Size = new System.Drawing.Size(306, 26);
             this.DateDob.TabIndex = 6;
             // 
             // BtnCreate
@@ -134,11 +136,30 @@ namespace MyDesktop
             this.BtnReset.UseVisualStyleBackColor = true;
             this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
+            // LabelEmail
+            // 
+            this.LabelEmail.AutoSize = true;
+            this.LabelEmail.Location = new System.Drawing.Point(72, 192);
+            this.LabelEmail.Name = "LabelEmail";
+            this.LabelEmail.Size = new System.Drawing.Size(48, 20);
+            this.LabelEmail.TabIndex = 10;
+            this.LabelEmail.Text = "Email";
+            this.LabelEmail.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // TextEmail
+            // 
+            this.TextEmail.Location = new System.Drawing.Point(270, 178);
+            this.TextEmail.Name = "TextEmail";
+            this.TextEmail.Size = new System.Drawing.Size(307, 26);
+            this.TextEmail.TabIndex = 11;
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1104, 578);
+            this.Controls.Add(this.TextEmail);
+            this.Controls.Add(this.LabelEmail);
             this.Controls.Add(this.BtnReset);
             this.Controls.Add(this.BtnRefresh);
             this.Controls.Add(this.BtnCreate);
@@ -172,5 +193,7 @@ namespace MyDesktop
         private System.Windows.Forms.Button BtnCreate;
         private System.Windows.Forms.Button BtnRefresh;
         private System.Windows.Forms.Button BtnReset;
+        private System.Windows.Forms.Label LabelEmail;
+        private System.Windows.Forms.TextBox TextEmail;
     }
 }
